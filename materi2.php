@@ -14,6 +14,28 @@ if (isset($_POST['angka'])) {
     }
     }   
 }
+?>
+
+<?php   
+//Looping while dan do while
+
+echo "<br><b>while loop</b><br>";
+
+if (isset($_POST["angka"])) {
+    $data = $_POST["angka"];
+    $i = 1; 
+    while ($i <= $data) {
+        echo "nilai a adalah $i<br>";
+        $i++;
+    }
+}
+
+echo "<br><br><b>do while loop</b><br>";    
+$a = 10;
+do{
+echo "nilai a adalah $a<br>";
+$a--;
+}while($a >= 5);
 
 echo "<br><br><button><a href ='index.php'>Kembali Ke Menu Utama</a></button>";
 ?>
