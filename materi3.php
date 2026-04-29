@@ -41,5 +41,33 @@ if (isset($_POST['angka1']) && isset($_POST['angka2']) && isset($_POST['op'])) {
     $angka2 = $_POST['angka2'];
     $hasil = kalkulator($angka1, $angka2, $op);
     echo "Hasil: $hasil<br>";
-}   
+}  
+
+echo "<br><br><b>Login Menggunakan Function</b><br>";
+function login($username, $password){
+    
+    if($username == "admin" && $password == "admin") {
+        return "Login berhasil";
+    } else {
+        return "Login gagal";
+    }
+}
+?>
+
+<form action="" method="post">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <input type="submit" value="Login">
+</form>
+
+<?php
+if (isset($_POST['username']) && isset($_POST['password'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $hasil = login($username, $password);
+    echo "$hasil";
+}
+
+echo "<br><br><button><a href ='index.php'>Kembali Ke Menu Utama</a></button>";
+echo "<br><button><a href ='materi4.php'>ke materi selanjutnya</a></button>";
 ?>
