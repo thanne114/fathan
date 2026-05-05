@@ -9,7 +9,7 @@ $koneksi = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 if (!$koneksi) {
     die("koneksi gagal: " . mysqli_connect_error());
 } else {
-    echo "koneksi berhasil";
+    echo "koneksi berhasil!<br>";
 }
 
-?>
+?> 
